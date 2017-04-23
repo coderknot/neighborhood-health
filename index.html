@@ -9,15 +9,29 @@
   </head>
   <body>
     <div class="container">
-      <h1>Neighborhood Health</h1>
-      <p>Portland, OR</p>
-      <div id="doctor-search-form">
-        <label for="symptom">Main symptom:</label>
-        <input type="text" id="symptom">
-        <button type="btn-success" id="doctor-search">Search</button>
+      <div id="header" class="page-header">
+        <h1>Neighborhood Health <small>Doctor Listing</small></h1>
       </div>
+      <div id="about">
+        <p>
+          Neighborhood Health utilizes the <a href="https://developer.betterdoctor.com/" target="_blank">BetterDoctor API</a> to provide nearby doctor listings.
+        </p>
+        <p>
+          <strong>Note: </strong>
+          This search is currently only available for Portland, OR (
+          <strong>Latitude: </strong>
+          45.5231,
+          <strong>Latitude: </strong>
+          -122.6765) within a 100 mile radius and is limited to 10 doctor listings.
+        </p>
+      </div>
+      <div id="doctor-search-form">
+        <label for="symptom">Symptoms:</label>
+        <input type="text" class="form-control" id="symptom" placeholder="sore throat, rash, ...">
+        <button type="button" class="btn btn-primary" id="doctor-search">Search</button>
+      </div>
+      <hr>
       <div id="doctor-search-results">
-
       </div>
     </div>
   </body>
