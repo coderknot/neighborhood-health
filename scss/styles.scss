@@ -1,6 +1,11 @@
-.nav-xs .nav { min-height:28px; height: 28px; }
-.nav-xs .nav { padding: 0px 12px;font-size: 16px;line-height: 28px; }
-.nav-xs .nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 28px; }
-.nav-sm .nav { min-height:40px; height: 40px; }
-.nav-sm .nav{ padding: 0px 12px;font-size: 16px;line-height: 40px; }
-.nav-sm .nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 40px; }
+#doctor-search-form {
+  margin-bottom: 20px;
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+#symptom {
+  width: 250px;
+}
