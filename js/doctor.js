@@ -4,14 +4,12 @@ function Doctor() {
 }
 
 Doctor.prototype.getDoctors = function(symptom, displayDoctors) {
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' +
-    symptom +
-    '&location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=' + apiKey)
-    .then(function(response) {
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + symptom + '&location=45.5231%2C-122.6765%2C100&user_location=45.5231%2C-122.6765&skip=0&limit=10&user_key=' + apiKey).then(function(response) {
       var doctors = [];
 
-      response.data.forEach(function(doctor, displayDoctors) {
+      response.data.forEach(function(doctor) {
         var singleDoctor = {};
+
         singleDoctor.firstName = doctor.profile.first_name;
         singleDoctor.lastName = doctor.profile.last_name;
         singleDoctor.title = doctor.profile.title;
@@ -21,6 +19,8 @@ Doctor.prototype.getDoctors = function(symptom, displayDoctors) {
         } else {
           singleDoctor.image = doctor.profile.image_url;
         }
+        singleDoctor.practice = doctor.practices[0].name;
+
         doctors.push(singleDoctor);
       });
 
